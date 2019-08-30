@@ -109,17 +109,6 @@ function Breakdown(props) {
     )}
 }
 
-// <View> 
-// <Text style = {styles.textBig}> {countryName}</Text>
-// <Text>Accommodation: {costs[0][travelStyle]}</Text>
-// <Text>Local Transportation: {costs[2][travelStyle]}</Text>
-// <Text>Food: {costs[3][travelStyle]} </Text>
-// <Text>Entertainment: {costs[5][travelStyle]}</Text>
-// <Text>Scams and robberies: {costs[10][travelStyle]}</Text>
-// <Text>Alcohol: {costs[11][travelStyle]}</Text>
-// {/* <Text>{capital}</Text> */}
-
-
 const styles = StyleSheet.create({
     textBig: {
         fontSize: 36,
@@ -142,11 +131,7 @@ const Container = styled.View`
     justify-content:center;
     align-items:center
 `
-// const Title = styled.Text`
-// font-size:20px;
-// text-align:center;
-//  color:white;
-// `
+
 const Item = styled.View`
 border:1px solid #ccc;
 margin:2px 0;
@@ -159,39 +144,3 @@ padding:10px;
 `
 export default Breakdown;
 
-
-
-// useEffect(() => {
-    //     fetch('https://restcountries.eu/rest/v2/alpha/' + countryCode, {
-    //         method: 'GET', 
-    //         headers: {
-    //             'Content-Type': 'application/json', 
-    //             'Accept': 'application/json'
-    //         }, 
-    //     })
-    //     .then(response => response.json())
-    //     .then(responseJson => {
-    //         setCapital(responseJson.capital);
-    //         if (capital) {
-    //         fetch('http://localhost:4000/costs/' + capital, {
-    //             method: 'GET', 
-    //             headers: {
-    //                 'Content-Type': 'application/json', 
-    //                 'Accept': 'application/json'
-    //             }
-    //         })
-    //         .then(response => {
-    //             return response.text(); 
-    //         })
-    //         .then(responseJson => {
-    //             console.log(responseJson);
-
-    //             if (responseJson[0]==='<' || responseJson[1]==='<') { return;}
-    //             else { 
-    //                 console.log((JSON.parse(responseJson)).data); }
-    //         })
-    //     }
-    //     })
-    //     .catch(err => console.log(err)); 
-    
-    // }); 
