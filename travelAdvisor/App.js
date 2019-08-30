@@ -1,0 +1,38 @@
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { LoginScreen, SignUpScreen, CoverScreen, FormScreen, ResultScreen, BreakdownScreen, BreakdownCityScreen} from './screens';
+
+
+const Navigator = createStackNavigator(
+  {
+    Login: LoginScreen, 
+    SignUp: SignUpScreen, 
+    Cover: CoverScreen, 
+    Form: FormScreen, 
+    Results: ResultScreen, 
+    Breakdown: BreakdownScreen,
+    BreakdownCity: BreakdownCityScreen,
+  }, 
+  { initialRouteName: 'Cover' }
+);
+
+export default createAppContainer(Navigator); 
+
+
+// export default function App() {
+//   return (
+//     <View style={styles.container}>
+//       <Text>Open up App.js to start working on your app!</Text>
+//     </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+// });
